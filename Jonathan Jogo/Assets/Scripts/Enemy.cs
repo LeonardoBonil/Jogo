@@ -16,16 +16,16 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-	anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         rig.velocity = new Vector2(speed, rig.velocity.y);
-	colliding = Physics2D.Linecast(rightCol.position, leftCol.position);
-	if(colliding){
-	transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
-	speed *= -1f;}
+		colliding = Physics2D.Linecast(rightCol.position, leftCol.position);
+		if(colliding){
+			transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
+			speed *= -1f;
+		}
     }
 }
