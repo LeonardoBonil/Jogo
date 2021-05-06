@@ -1,3 +1,4 @@
 Base path: 'C:/Users/User/Desktop/TRAB/2020.3.5f1/Editor/Data', plugins path 'C:/Users/User/Desktop/TRAB/2020.3.5f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
+Cmd: shutdown

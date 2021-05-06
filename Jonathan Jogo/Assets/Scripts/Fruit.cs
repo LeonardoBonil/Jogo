@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fruit : MonoBehaviour
 {
+    public bool collected;
+    public int Score;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +17,5 @@ public class Fruit : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D collider){if(collider.gameObject.tag == "Player"){Destroy(gameObject);}}
+    void OnTriggerEnter2D(Collider2D collider){if(collider.gameObject.tag == "Player"){Destroy(gameObject); GameController.instance.totalScore += Score; collected = true;}}
 }

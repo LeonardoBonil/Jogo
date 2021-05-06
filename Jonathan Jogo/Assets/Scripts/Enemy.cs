@@ -8,10 +8,10 @@ public class Enemy : MonoBehaviour
 	private Animator anim;
 	public float speed;
 	public bool colliding;
-	public Transform headPoint;
 	public Transform leftCol;
 	public Transform rightCol;
 	public LayerMask layer;
+	public BoxCollider2D box;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
 	colliding = Physics2D.Linecast(rightCol.position, leftCol.position);
 	if(colliding){
 	transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
-	speed *= -1f;}
+	speed *= -1f;
+      }
     }
 }
