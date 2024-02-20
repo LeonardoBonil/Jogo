@@ -1,2 +1,2 @@
 # Jogo
-Um jogo
+Projeto Universidade, teste de colisão jogo.
